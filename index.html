@@ -402,6 +402,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin-bottom: 18px;
   font-size: 22px;
 }
+/* サービスカード用の実写真エリア（生命保険カードなど、写真を使う場合に使用） */
+.service-photo{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: var(--accent-pale);
+}
+.service-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
 .service-card h3{ font-size: 18.5px; margin-bottom: 10px; }
 .service-card p{ color: var(--ink-soft); font-size: 14.5px; margin: 0 0 14px; }
 .service-card .tag{
@@ -943,19 +958,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
     <div class="service-grid">
       <div class="service-card reveal">
-        <div class="service-icon">🛡️</div>
+        <!-- ▼実写真使用：ご家族写真（撮影者クレジット入り。正式な透かしなし版に差し替え推奨） -->
+        <div class="service-photo">
+          <img src="sakimori_family.jpg" alt="笑顔で寄り添うご家族の様子">
+        </div>
         <span class="tag">生命保険</span>
         <h3>オーダーメイド生命保険</h3>
         <p>死亡保障・医療保障・就業不能保障などを組み合わせ、家計に無理のない保険料で「本当に困らない」保障を設計します。</p>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">📈</div>
+        <!-- ▼実写真使用：将来の人生を歩む姿をイメージした写真 -->
+        <div class="service-photo">
+          <img src="sakimori_asset.webp" alt="光の差す道を歩む二人の後ろ姿">
+        </div>
         <span class="tag">資産運用</span>
         <h3>資産運用のご相談</h3>
         <p>保険と合わせて、将来に向けた資産形成のご相談も承ります。リスク許容度に合わせた無理のない運用方針をご提案します。</p>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🤖</div>
+        <!-- ▼実写真使用：夕日の中を駆ける人々の写真（自由な未来のイメージ） -->
+        <div class="service-photo">
+          <img src="sakimori_ai.jpg" alt="夕日の中、海辺を駆ける人々の後ろ姿">
+        </div>
         <span class="tag">AIコンサル</span>
         <h3>AIコンサルティング</h3>
         <p>AIを活用したデータ分析で、保険・資産運用に関する意思決定をサポート。感覚に頼らない根拠あるご提案を行います。</p>
